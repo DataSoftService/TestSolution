@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acv2.SharedKernel.Infraestructure" Version="2.0.0" />
+    <PackageReference Include="NPoco.SqlServer" Version="5.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestSolution.Application.DTOs.Dto\TestSolution.Application.DTOs.Dto.csproj" />
+    <ProjectReference Include="..\TestSolution.Domain.Models\TestSolution.Domain.Models.csproj" />
+  </ItemGroup>
+
+</Project>

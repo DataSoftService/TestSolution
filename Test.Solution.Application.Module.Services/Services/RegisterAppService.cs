@@ -1,6 +1,7 @@
 ﻿using Acv2.SharedKernel.Application;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestSolution.Application.DTOs.Dto;
@@ -43,7 +44,15 @@ namespace Test.Solution.Application.Module.Services.Services
 
         public async Task<RegisterDto> edit(string sql)
         {
-            throw new NotImplementedException();
+            try
+            {
+                db.Instance.Update<Register>(sql);
+                return await Task.FromResult(new RegisterDto());
+            }
+            catch (Exception x)
+            {
+                throw new ArgumentException(x.Message);
+            }
         }
 
         public async Task<RegisterDto> find(int id)
@@ -65,22 +74,57 @@ namespace Test.Solution.Application.Module.Services.Services
 
         public async Task<RegisterDto> find(Func<RegisterDto, bool> lanbdaExpresion)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var _list = this.list().Result.ProjectedAs<List<RegisterDto>>();
+                var entity = _list.SingleOrDefault(lanbdaExpresion);
+                return await Task.FromResult(entity);
+
+            }
+            catch (Exception x)
+            {
+                throw new ArgumentException(x.Message);
+            }
         }
 
         public async Task<RegisterDto> insert(RegisterDto entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var _entity=db.register.Add(entity.ProjectedAs<Register>());
+                entity.Id = _entity.Entity.Id;
+                return await Task.FromResult(entity);
+            }
+            catch (Exception x)
+            {
+                throw new ArgumentException(x.Message);
+            }
         }
 
-        public async Task<RegisterDto> insert(IEnumerable<RegisterDto> list)
+        public async Task<IEnumerable<RegisterDto>> insert(IEnumerable<RegisterDto> list)
         {
-            throw new NotImplementedException();
+            try
+            {
+                db.register.AddRange(list.ProjectedAs<List<Register>>());
+
+                return await Task.FromResult(list);
+            }
+            catch (Exception x)
+            {
+                throw new ArgumentException(x.Message);
+            }
         }
 
         public async Task<IEnumerable<RegisterDto>> list()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await Task.FromResult(db.register.AsAsyncEnumerable().ProjectedAs<List<RegisterDto>>());
+            }
+            catch (Exception x)
+            {
+                throw new ArgumentException(x.Message);
+            }
         }
 
         public async Task<IEnumerable<RegisterDto>> list(Func<RegisterDto, bool> lanbdaExpresion)

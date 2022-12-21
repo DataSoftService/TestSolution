@@ -47,7 +47,7 @@ namespace Test.Solution.Application.Module.Services
         /// </summary>
         /// <param name="list"></param>
         /// <returns></returns>
-        Task<T> insert(IEnumerable<T> list);
+        Task<IEnumerable<T>> insert(IEnumerable<T> list);
         /// <summary>
         /// Modifies an entity and returns the same modified
         /// </summary>

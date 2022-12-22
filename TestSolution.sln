@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comunications", "Comunicati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSolution.Comunications.Crud", "TestSolution.Comunications.Crud\TestSolution.Comunications.Crud.csproj", "{E6D7EF0F-2199-4389-9DC1-831F27283B61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSolution.UI.Web", "TestSolution.UI.Web\TestSolution.UI.Web.csproj", "{8B5161BA-8598-4FB4-A8F2-2B9C7D8E32E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{E6D7EF0F-2199-4389-9DC1-831F27283B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6D7EF0F-2199-4389-9DC1-831F27283B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6D7EF0F-2199-4389-9DC1-831F27283B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B5161BA-8598-4FB4-A8F2-2B9C7D8E32E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B5161BA-8598-4FB4-A8F2-2B9C7D8E32E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B5161BA-8598-4FB4-A8F2-2B9C7D8E32E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B5161BA-8598-4FB4-A8F2-2B9C7D8E32E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{6B8B2678-4C3F-4C89-89C6-BC6E5A54F22B} = {7FA88F9A-E754-47C8-8D49-F7E5583E2BCD}
 		{B4241E13-9490-4B5C-8C12-354E0F227ECC} = {50997988-44FD-4AC5-8849-E4F070BA244E}
 		{E6D7EF0F-2199-4389-9DC1-831F27283B61} = {836217F3-B88D-43B0-92D9-7DA1F754E73E}
+		{8B5161BA-8598-4FB4-A8F2-2B9C7D8E32E8} = {4CCCA128-7627-46C1-82DD-78844AAFD965}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {54D7F744-368F-42F4-92CB-85D3FFB2F483}

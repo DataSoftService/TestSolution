@@ -4,6 +4,7 @@ using Acv2.SharedKernel.Crosscutting.NetFramerwork.Logging;
 using Acv2.SharedKernel.Crosscutting.NetFramerwork.Validator;
 using Acv2.SharedKernel.Crosscutting.Validator;
 using Microsoft.Extensions.DependencyInjection;
+using Test.Solution.Application.Module.Services.Services;
 using Unity;
 using Unity.Lifetime;
 
@@ -21,8 +22,8 @@ namespace Test.Solution.Application.Module.Services
             var typeAdapterFactory = container.Resolve<ITypeAdapterFactory>();
             TypeAdapterFactory.SetCurrent(typeAdapterFactory);
 
-            //Registrar servicios
-            //container.RegisterType(typeof(RequerimientosRelacionService));
+            //Register services
+            container.RegisterType(typeof(RegisterAppService));
             return container;
         }
         public static IServiceCollection AddServiceApplicationGeneral(this IServiceCollection service)
